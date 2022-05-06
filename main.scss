@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+// -- CSS reset --
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+// -- CSS reset end --
+
+@mixin font-main {
+    font-family: 'Pacifico', cursive;
+}
+
+@mixin font-secondary {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #444444;
+}
+
+// -- General Settings --
+* {
+    box-sizing: border-box;
+    font-family: 'Pacifico', cursive;
+    font-size: 24px;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(150deg, #4affde, #872dfe);
+}
+
+.wrapper {
+    max-width: 560px;
+    padding: 52px 48px;
+    margin: 36px auto;
+    background: rgba(255, 255, 255, 0.22);
+    border-radius: 20px;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.1);
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 236px;
+    padding-bottom: 15px;
+
+    * {
+        @include font-secondary;
+    }
+}
+
+.btn-clear {
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    padding: 5px 16px;
+    margin-top: 20px;
+    border-radius: 7px;
+    letter-spacing: 1.4px;
+    transition: transform 0.25s ease, -webkit-transform 0.25s ease;
+    background: linear-gradient(135deg, #1798fb 0%, #2D5CFE 100%);
+}
+
+.btn-clear.active {
+    opacity: 0.9;
+    pointer-events: auto;
+}
+
+.btn-clear:active {
+    transform: scale(0.93);
+}
